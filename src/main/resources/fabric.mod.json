@@ -1,34 +1,24 @@
 {
 	"schemaVersion": 1,
-	"id": "template",
+	"id": "fmw",
 	"version": "${version}",
-	"name": "Template mod",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "FabricMetadataWrap",
+	"description": "Just basically easily wrap Fabric's metadata into something much shorter. Is this useless? Yes! Do I care? Nope.",
 	"authors": [
-		"devOS: Sanity Edition",
-		"Team Nautical"
+		"asojidev"
 	],
 	"contact": {
-		"homepage": "https://devos.one/",
-		"sources": "https://github.com/devOS-Sanity-Edition/fabric-nautical-template"
+		"homepage": "https://asoji.one/",
+		"sources": "https://github.com/asoji/FabricMetadataWrap"
 	},
 	"license": "MIT",
 	"icon": "assets/template/icon.png",
 	"environment": "*",
-	"entrypoints": {
-		"main": [
-			"one.devos.nautical.template.TemplateMod"
-		],
-		"client": [
-			"one.devos.nautical.template.client.TemplateModClient"
-		]
-	},
-	"mixins": [
-		"template.mixins.json"
-	],
+	"entrypoints": { },
+	"mixins": [ ],
 	"depends": {
-		"fabricloader": ">=0.14.21",
-		"minecraft": "~1.20.1",
+		"fabricloader": "*",
+		"minecraft": "*",
 		"java": ">=17",
 		"fabric-api": "*"
 	}
