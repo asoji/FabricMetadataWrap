@@ -12,7 +12,6 @@
 		"sources": "https://github.com/asoji/FabricMetadataWrap"
 	},
 	"license": "MIT",
-	"icon": "assets/template/icon.png",
 	"environment": "*",
 	"entrypoints": { },
 	"mixins": [ ],
