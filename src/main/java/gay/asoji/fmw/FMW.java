@@ -49,21 +49,21 @@ public class FMW {
         return (Collection<ModDependency>) getMetadata(modID).getDependencies().stream().filter(modDependency -> modDependency.getKind() == kind);
     }
 
-//    public static Collection<ModDependency> getBreaks(String modID) {
-//        return getMetadata(modID).getDependencies().stream().filter(modDependency -> modDependency.getKind() == ModDependency.Kind.BREAKS).toList();
-//    }
-//
-//    public static Collection<ModDependency> getConflicts(String modID) {
-//        return getMetadata(modID).getDependencies().stream().filter(modDependency -> modDependency.getKind() == ModDependency.Kind.CONFLICTS).toList();
-//    }
-//
-//    public static Collection<ModDependency> getDepends(String modID) {
-//        return getMetadata(modID).getDependencies().stream().filter(modDependency -> modDependency.getKind() == ModDependency.Kind.DEPENDS).toList();
-//    }
-//
-//    public static Collection<ModDependency> getRecommends(String modID) {
-//        return getMetadata(modID).getDependencies().stream().filter(modDependency -> modDependency.getKind() == ModDependency.Kind.RECOMMENDS).toList();
-//    }
+    public static Collection<ModDependency> getBreaks(String modID) {
+        return getMetadata(modID).getDependencies().stream().filter(modDependency -> modDependency.getKind() == ModDependency.Kind.BREAKS).toList();
+    }
+
+    public static Collection<ModDependency> getConflicts(String modID) {
+        return getMetadata(modID).getDependencies().stream().filter(modDependency -> modDependency.getKind() == ModDependency.Kind.CONFLICTS).toList();
+    }
+
+    public static Collection<ModDependency> getDepends(String modID) {
+        return getMetadata(modID).getDependencies().stream().filter(modDependency -> modDependency.getKind() == ModDependency.Kind.DEPENDS).toList();
+    }
+
+    public static Collection<ModDependency> getRecommends(String modID) {
+        return getMetadata(modID).getDependencies().stream().filter(modDependency -> modDependency.getKind() == ModDependency.Kind.RECOMMENDS).toList();
+    }
 
     public static Collection<ModDependency> getSuggests(String modID) {
         return getMetadata(modID).getDependencies().stream().filter(modDependency -> modDependency.getKind() == ModDependency.Kind.SUGGESTS).toList();
