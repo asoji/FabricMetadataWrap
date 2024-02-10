@@ -5,6 +5,7 @@ plugins {
 
 	alias(libs.plugins.grgit)
 	alias(libs.plugins.fabric.loom)
+	alias(libs.plugins.dokka)
 }
 
 val archivesBaseName = "${project.property("archives_base_name").toString()}"
@@ -27,6 +28,8 @@ dependencies {
 
 	//Fabric
 	modImplementation(libs.fabric.loader)
+
+	runtimeOnly(libs.dokka.`as`.java)
 }
 
 // Write the version to the fabric.mod.json
