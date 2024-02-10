@@ -1,3 +1,13 @@
+import org.jetbrains.dokka.base.DokkaBase
+import org.jetbrains.dokka.gradle.DokkaTask
+import org.jetbrains.dokka.base.DokkaBaseConfiguration
+
+buildscript {
+	dependencies {
+		classpath("org.jetbrains.dokka:dokka-base:1.9.10")
+	}
+}
+
 plugins {
 	kotlin("jvm") version "1.9.0"
 	`maven-publish`
@@ -29,7 +39,18 @@ dependencies {
 	//Fabric
 	modImplementation(libs.fabric.loader)
 
-	runtimeOnly(libs.dokka.`as`.java)
+	dokkaHtmlPlugin(libs.dokka.`as`.java)
+}
+
+tasks.withType<DokkaTask>().configureEach {
+	pluginConfiguration<DokkaBase, DokkaBaseConfiguration> {
+//		customAssets = listOf(file("my-image.png"))
+//		customStyleSheets = listOf(file("my-styles.css"))
+		footerMessage = "(c) 2024 asoji"
+		separateInheritedMembers = false
+//		templatesDir = file("dokka/templates")
+		mergeImplicitExpectActualDeclarations = false
+	}
 }
 
 // Write the version to the fabric.mod.json
