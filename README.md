@@ -56,18 +56,6 @@ class TestMod : ModInitializer {
 ## Adding to your Fabric project
 FabricMetadataWrap is on devOS' Public Maven.
 
-### Groovy
-```groovy
-repositories {
-    maven { url = "https://mvn.devos.one/snapshots/" }
-}
-
-dependencies {
-    include(modImplementation("gay.asoji:fmw:<version>"))
-}
-```
-###### * This could be wrong, as I don't use Groovy anymore really, I'll check later ok byeeeeeeeeeee
-
 ### Kotlin DSL
 ```kotlin
 repositories {
